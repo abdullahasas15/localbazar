@@ -1,0 +1,216 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalBazaar.com - Discover Local Shops Near You</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1 class="logo-text">LocalBazaar.com</h1>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="nav-buttons">
+                    <button class="nav-btn">Login</button>
+                    <button class="nav-btn">Register</button>
+                    <button class="nav-btn cart-btn">
+                        <i data-lucide="shopping-cart"></i>
+                        <span>Cart</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <!-- Dynamic Background Images -->
+            <div class="hero-background">
+                <div class="background-image active" data-index="0">
+                    <img src="{% static 'images/shopping-queue.png' %}" alt="Shopping Queue">
+                </div>
+                <div class="background-image" data-index="1">
+                    <img src="{% static 'images/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg' %}" alt="Local market scene 1">
+                </div>
+                <div class="background-image" data-index="2">
+                    <img src="{% static 'images/arpad-czapp-tvP6pCnq9iI-unsplash.jpg' %}" alt="Local market scene 2">
+                </div>
+                <div class="background-image" data-index="3">
+                    <img src="{% static 'images/2149421148.jpg' %}" alt="Local market scene 3">
+                </div>
+                
+                <!-- Gradient Overlays -->
+                <div class="gradient-overlay-1"></div>
+                <div class="gradient-overlay-2"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="hero-content">
+                <!-- Main Headline -->
+                <h1 class="hero-title">
+                    Discover Local Shops <br>
+                    <span class="highlight">Near You!</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Your Village, Your Bazaar. Connect with local businesses and discover unique products in your community.
+                </p>
+                
+                <!-- Search Section -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <div class="search-input-wrapper">
+                            <input
+                                type="text"
+                                id="village-search"
+                                placeholder="Enter your village/town name"
+                                class="search-input"
+                            />
+                        </div>
+                        <button class="search-btn" id="search-btn">
+                            <i data-lucide="search"></i>
+                            <span>Find Shops</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Trust Statement -->
+                <div class="trust-statement">
+                    <p>Loved by many villages across the country</p>
+                </div>
+
+                <!-- Image Navigation Dots -->
+                <div class="image-dots">
+                    <button class="dot active" data-index="0" aria-label="View background image 1"></button>
+                    <button class="dot" data-index="1" aria-label="View background image 2"></button>
+                    <button class="dot" data-index="2" aria-label="View background image 3"></button>
+                    <button class="dot" data-index="3" aria-label="View background image 4"></button>
+                </div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div class="hero-bottom-gradient"></div>
+        </section>
+
+        <!-- Shop Owner CTA Section -->
+        <section class="shop-owner-section">
+            <!-- Background Pattern -->
+            <div class="section-background">
+                <img src="{% static 'images/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg' %}" alt="Local shops pattern">
+            </div>
+            
+            <div class="cta-container">
+                <div class="cta-card">
+                    <div class="cta-icon">
+                        <i data-lucide="store"></i>
+                    </div>
+                    
+                    <h2 class="cta-title">Are you a Shop Owner?</h2>
+                    
+                    <p class="cta-description">
+                        Join our growing community of local businesses. Reach more customers in your village and grow your business online.
+                    </p>
+                    
+                    <div class="cta-buttons">
+                        <button class="cta-btn primary">
+                            <span>Register Your Shop</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                        
+                        <button class="cta-btn secondary">
+                            <span>Shop Owner Login</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="cta-features">
+                        <div class="feature">
+                            <div class="feature-dot green"></div>
+                            <span>Easy Setup</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-dot blue"></div>
+                            <span>No Hidden Fees</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-dot purple"></div>
+                            <span>24/7 Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-header">
+                <h3 class="footer-title">LocalBazaar.com</h3>
+                <p class="footer-description">
+                    Connecting communities through local commerce. Discover unique products and support local businesses in your village.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4 class="footer-column-title">For Customers</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Find Shops</a></li>
+                        <li><a href="#" class="footer-link">Browse Products</a></li>
+                        <li><a href="#" class="footer-link">Track Orders</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-column-title">For Shop Owners</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Register Shop</a></li>
+                        <li><a href="#" class="footer-link">Manage Products</a></li>
+                        <li><a href="#" class="footer-link">View Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-column-title">Support</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-column-title">Legal</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 LocalBazaar.com. All rights reserved. Made with ❤️ for local communities.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        // Initialize Lucide icons immediately
+        lucide.createIcons();
+    </script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html> 
